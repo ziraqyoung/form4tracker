@@ -55,7 +55,7 @@ group :development do
   gem "web-console", ">= 4.1.0"
 
   # Add speed badges [https://github.com/MiniProfiler/rack-mini-profiler]
-  # gem "rack-mini-profiler", ">= 2.3.3"
+  gem "rack-mini-profiler", ">= 2.3.3"
 
   # Speed up commands on slow machines / big apps [https://github.com/rails/spring]
   # gem "spring"
@@ -66,4 +66,6 @@ group :test do
   gem "capybara", ">= 3.26"
   gem "selenium-webdriver"
   gem "webdrivers"
+  # rexml no default in ruby 3.0, -> required for specs 
+  gem 'rexml', '~> 3.2', '>= 3.2.4'
 end
