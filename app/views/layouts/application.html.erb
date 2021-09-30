@@ -9,7 +9,18 @@
     <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
   </head>
 
-  <body>
-    <%= yield %>
+  <body class="space-x-3">
+    <header class="border-t">
+      This is header component
+    </header>
+
+    <main class="border-t">
+      <%= yield %>
+    </main>
+
+
+    <footer class="border-t">
+      Footer placeholder
+    </footer>
   </body>
 </html>
