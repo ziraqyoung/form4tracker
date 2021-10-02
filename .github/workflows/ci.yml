@@ -71,6 +71,6 @@ jobs:
         run: |
           cp config/database.ci.yml config/database.yml
           bundle exec rails db:prepare
-          bundle exec rails assets:precompile
+          bundle exec rails test:prepare 
           bundle exec rails test
 
