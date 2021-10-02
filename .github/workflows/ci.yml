@@ -32,9 +32,9 @@ jobs:
           bundler-cache: true
 
       - name: Setup Node.js
-        uses: actions/setup-node@v2.1.5
+        uses: actions/setup-node@v2
         with:
-          node-version: 12.x
+          node-version: 14.x
 
       - name: Get yarn cache directory path
         id: yarn-cache-dir-path
@@ -58,7 +58,6 @@ jobs:
         run: |
           bundle install --jobs 4 --retry 3
           yarn install --frozen-lockfile
-          yarn build
 
       - name: Build and run tests
         env:
@@ -72,5 +71,5 @@ jobs:
         run: |
           cp config/database.ci.yml config/database.yml
           bundle exec rails db:prepare
-          bundle exec rspec
+          bundle exec rails test
 
