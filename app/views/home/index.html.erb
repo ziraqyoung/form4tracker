@@ -1,2 +1,29 @@
-<h1 class="text-3xl text-pink-800 font-bold underline text-center">Home#index</h1>
-<p>Find me in app/views/home/index.html.erb</p>
+<h1 class="font-bold text-center text-red-400">Mortgage Calculator</h1>
+
+<%= form_with class: '', data: { controller: 'mortgage'  } do |form| %>
+  <div>
+    <%= form.label :home_price %>
+    <%= form.text_field :home_price, placeholder: '325000', required: true %>
+  </div>
+
+  <div class="flex">
+    <div>
+      <%= form.label :down_payment %>
+      <%= form.text_field :down_payment, placeholder: '$', required: true %>
+    </div>
+
+    <div>
+      <%= form.label :down_percent %>
+      <%= form.text_field :home, placeholder: '%', required: true %>
+    </div>
+  </div>
+
+  <div>
+    <%= form.label :interest_rate %>
+    <%= form.text_field :down_payment, placeholder: '3.4', required: true %>
+  </div>
+
+  <div>
+    <%= form.submit "Calculate mortgage" %>
+  </div>
+<% end %>
