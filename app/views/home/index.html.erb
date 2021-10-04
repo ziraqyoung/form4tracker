@@ -1,29 +1,29 @@
-<h1 class="font-bold text-center text-red-400">Mortgage Calculator</h1>
+<h1 class="font-bold text-3xl text-center text-red-400">Mortgage Calculator</h1>
 
-<%= form_with class: '', data: { controller: 'mortgage'  } do |form| %>
+<%= form_with class: '', data: { controller: 'mortgage', action: 'mortgage#calculate'  } do |form| %>
   <div>
     <%= form.label :home_price %>
-    <%= form.text_field :home_price, placeholder: '325000', required: true %>
+    <%= form.text_field :home_price, placeholder: '325000', required: true, data: { mortgage_target: "homePrice"  } %>
   </div>
 
   <div class="flex">
     <div>
       <%= form.label :down_payment %>
-      <%= form.text_field :down_payment, placeholder: '$', required: true %>
+      <%= form.text_field :down_payment, placeholder: '$', required: true, data: { mortgage_target: "downPayment"  } %>
     </div>
 
     <div>
       <%= form.label :down_percent %>
-      <%= form.text_field :home, placeholder: '%', required: true %>
+      <%= form.text_field :down_percent, placeholder: '%', required: true, data: { mortgage_target: "downPercent"  } %>
     </div>
   </div>
 
   <div>
     <%= form.label :interest_rate %>
-    <%= form.text_field :down_payment, placeholder: '3.4', required: true %>
+    <%= form.text_field :interest_rate, placeholder: '3.4', required: true, data: { mortgage_target: "interestRate"  } %>
   </div>
 
-  <div>
+  <div class="rails controller">
     <%= form.submit "Calculate mortgage" %>
   </div>
 <% end %>
