@@ -23,6 +23,11 @@
     <%= form.text_field :interest_rate, placeholder: '3.4', required: true, data: { mortgage_target: "interestRate"  } %>
   </div>
 
+  <div>
+    <%= form.label :mortgage_term %>
+    <%= form.text_field :mortgage_term, placeholder: '30', required: true, data: { mortgage_target: "mortgageTerm"  } %>
+  </div>
+
   <div class="rails controller">
     <%= form.submit "Calculate mortgage" %>
   </div>
