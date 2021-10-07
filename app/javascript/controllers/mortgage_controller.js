@@ -5,6 +5,7 @@ export default class extends Controller {
 
   calculate(event) {
     event.preventDefault();
+    console.log("Mortgager calculate montly payment")
   }
 
   // getter functions
