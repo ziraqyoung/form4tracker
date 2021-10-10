@@ -3,8 +3,5 @@
 
 import { application } from "./application"
 
-import HelloController from "./hello_controller"
-application.register("hello", HelloController)
-
-import MortgageController from "./mortgage_controller"
+import MortgageController from "./mortgage_controller.js"
 application.register("mortgage", MortgageController)
