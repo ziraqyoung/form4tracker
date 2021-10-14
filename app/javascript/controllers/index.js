@@ -2,6 +2,3 @@
 // Run that command whenever you add a new controller
 
 import { application } from "./application"
-
-import MortgageController from "./mortgage_controller.js"
-application.register("mortgage", MortgageController)
