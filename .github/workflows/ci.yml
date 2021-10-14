@@ -15,7 +15,7 @@ jobs:
         env:
           POSTGRES_PASSWORD: postgres
           POSTGRES_USER: ziraqyoung
-          POSTGRES_DB: mortgager_test
+          POSTGRES_DB: form4tracker_test
         options: --health-cmd pg_isready --health-interval 10s --health-timeout 5s --health-retries 5
 
       redis:
@@ -64,7 +64,7 @@ jobs:
           REDIS_URL: redis://localhost:6379/0
           PGHOST: localhost
           POSTGRES_USER: ziraqyoung
-          POSTGRES_DB: mortgager_test
+          POSTGRES_DB:form4tracker _test
           POSTGRES_PASSWORD: postgres
           RAILS_ENV: test
           RAILS_MASTER_KEY: ${{ secrets.RAILS_MASTER_KEY }}

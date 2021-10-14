@@ -1,5 +1,5 @@
 {
-  "name": "app",
+  "name":"form4tracker",
   "private": "true",
   "dependencies": {
     "@hotwired/stimulus": "^3.0.0",
