@@ -68,4 +68,10 @@ group :test do
   gem "webdrivers"
   # rexml no default in ruby 3.0, -> required for specs 
   gem 'rexml', '~> 3.2'
+    # pretty minitest ouput
+  gem 'minitest', '~> 5.14'
+  gem 'minitest-reporters', '~> 1.4'
+  # Automated testing upon file change
+  gem 'guard', '~> 2.17'
+  gem 'guard-minitest', '~> 2.4'
 end
