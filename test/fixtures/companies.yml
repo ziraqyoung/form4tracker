@@ -1,0 +1,14 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+beam_global:
+  cik: 1398805
+  name: Beam Global
+  ticker: BEEM
+  prices:
+
+
+test_company:
+  cik: 1398806
+  name: Test Company
+  ticker: TEC
+  prices:
