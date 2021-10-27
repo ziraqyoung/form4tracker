@@ -36,6 +36,8 @@ gem "tzinfo-data", platforms: %i[ mingw mswin x64_mingw jruby ]
 # Reduces boot times through caching; required in config/boot.rb
 gem "bootsnap", ">= 1.4.4", require: false
 
+gem 'alphavantagerb', '~> 1.4'
+
 # Use Active Model has_secure_password [https://guides.rubyonrails.org/active_model_basics.html#securepassword]
 # gem "bcrypt", "~> 3.1.7"
 
@@ -63,15 +65,18 @@ end
 
 group :test do
   # Use system testing [https://guides.rubyonrails.org/testing.html#system-testing]
-  gem "capybara", ">= 3.26"
-  gem "selenium-webdriver"
-  gem "webdrivers"
+  gem "capybara", "~> 3.26"
+  gem "selenium-webdriver", "~> 4.0"
+  gem "webdrivers", "~> 5.0"
   # rexml no default in ruby 3.0, -> required for specs 
   gem 'rexml', '~> 3.2'
     # pretty minitest ouput
   gem 'minitest', '~> 5.14'
   gem 'minitest-reporters', '~> 1.4'
   # Automated testing upon file change
-  gem 'guard', '~> 2.17'
+  gem 'guard', '~> 2.18'
   gem 'guard-minitest', '~> 2.4'
+
+  gem 'webmock', '~> 3.14'
+  gem 'vcr', '~> 6.0'
 end

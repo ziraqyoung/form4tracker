@@ -31,3 +31,6 @@
 !/app/assets/builds/.keep
 
 /node_modules
+
+/test/vcr_cassettes
+!/test/vcr_cassettes/.keep

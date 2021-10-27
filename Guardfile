@@ -33,6 +33,15 @@ guard :minitest, all_on_start: false do
   watch(%r{^app/mailers/(.*?)\.rb$}) do |matches|
     "test/mailers/#{matches[1]}_test.rb"
   end
+
+  watch(%r{^app/jobs/(.*?)\.rb$}) do |matches|
+    "test/jobs/#{matches[1]}_test.rb"
+  end
+
+  watch(%r{^app/channels/(.*?)\.rb$}) do |matches|
+    "test/channels/#{matches[1]}_test.rb"
+  end
+
   watch(%r{^app/views/(.*)_mailer/.*$}) do |matches|
     "test/mailers/#{matches[1]}_mailer_test.rb"
   end
