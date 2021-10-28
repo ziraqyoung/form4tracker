@@ -1,15 +1,17 @@
 {
-  "name":"form4tracker",
+  "name": "form4tracker",
   "private": "true",
   "dependencies": {
     "@hotwired/stimulus": "^3.0.0",
     "@hotwired/turbo-rails": "^7.0.1",
+    "@rails/request.js": "^0.0.5",
     "@tailwindcss/aspect-ratio": "^0.2.2",
     "@tailwindcss/forms": "^0.3.4",
     "@tailwindcss/line-clamp": "^0.2.2",
     "@tailwindcss/typography": "^0.4.1",
     "autoprefixer": "^10.3.6",
     "esbuild": "^0.13.3",
+    "highcharts": "^9.3.0",
     "postcss": "^8.3.8",
     "tailwindcss": "^2.2.16"
   },

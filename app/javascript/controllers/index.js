@@ -2,3 +2,6 @@
 // Run that command whenever you add a new controller
 
 import { application } from "./application"
+
+import CompanyPricesChartController from "./company_prices_chart_controller.js"
+application.register("company-prices-chart", CompanyPricesChartController)
