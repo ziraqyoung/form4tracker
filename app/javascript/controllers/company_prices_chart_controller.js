@@ -8,8 +8,15 @@ window.Highcharts = Highcharts; //this line did the magic
 export default class extends Controller {
 
   async connect() {
+    const request = new FetchRequest('get', '/api/prices?company_id=1');
+    const response = await request.perform();
 
-    await fetch('https://cdn.jsdelivr.net/gh/highcharts/highcharts@v7.0.0/samples/data/usdeur.json').then(r => r.json()).then( data => {
+    if (response.ok) {
+      const body = await response.json
+      const data = Object
+        .entries(body)
+        .map(([date, price]) => [Date.parse(date), parseFloat(price)])
+        .reverse();
 
       Highcharts.stockChart('container', {
         rangeSelector: {
@@ -38,8 +45,6 @@ export default class extends Controller {
           name: 'USD to EUR',
           data: data,
           id: 'dataseries'
-
-          // the event marker flags
         }, {
           type: 'flags',
           data: [{
@@ -60,7 +65,6 @@ export default class extends Controller {
           width: 16
         }]
       });
-    });
-
+    }
   }
 }
