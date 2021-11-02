@@ -2,13 +2,12 @@ import { Controller } from "@hotwired/stimulus"
 import { FetchRequest } from '@rails/request.js'
 
 import Highcharts from 'highcharts/highstock';
-window.Highcharts = Highcharts; //this line did the magic
 
 // Connects to data-controller="company-prices-chart"
 export default class extends Controller {
 
   async connect() {
-    const request = new FetchRequest('get', '/api/prices?company_id=1');
+    const request = new FetchRequest('get', '/api/prices?company_id=1', { responseKind: 'json' });
     const response = await request.perform();
 
     if (response.ok) {
