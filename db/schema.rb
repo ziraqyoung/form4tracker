@@ -26,11 +26,10 @@ ActiveRecord::Schema.define(version: 2021_11_07_075625) do
   end
 
   create_table "ticker_ciks", force: :cascade do |t|
-    t.string "tickers", default: [], array: true
     t.string "cik", null: false
+    t.string "tickers", default: [], array: true
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["cik", "tickers"], name: "index_ticker_ciks_on_cik_and_tickers", unique: true
     t.index ["cik"], name: "index_ticker_ciks_on_cik", unique: true
     t.index ["tickers"], name: "index_ticker_ciks_on_tickers", using: :gin
   end
