@@ -34,3 +34,4 @@
 
 /test/vcr_cassettes
 !/test/vcr_cassettes/.keep
+/.byebug_*
