@@ -1,0 +1,2 @@
+class TickerCik < ApplicationRecord
+end
