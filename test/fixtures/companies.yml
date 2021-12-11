@@ -1,4 +1,19 @@
-# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+# == Schema Information
+#
+# Table name: companies
+#
+#  id         :bigint           not null, primary key
+#  cik        :string           not null
+#  name       :string
+#  prices     :json
+#  ticker     :string
+#  created_at :datetime         not null
+#  updated_at :datetime         not null
+#
+# Indexes
+#
+#  index_companies_on_cik  (cik) UNIQUE
+#
 
 beam_global:
   cik: 1398805
