@@ -40,7 +40,6 @@ gem "tzinfo-data", platforms: %i[ mingw mswin x64_mingw jruby ]
 gem "bootsnap", ">= 1.4.4", require: false
 
 gem 'alphavantagerb', '~> 1.4'
-gem 'sec-edgar-sdk', github: 'ziraqyoung/sec-edgar-sdk'
 gem "httparty", "~> 0.20.0"
 
 # Use Active Model has_secure_password [https://guides.rubyonrails.org/active_model_basics.html#securepassword]
