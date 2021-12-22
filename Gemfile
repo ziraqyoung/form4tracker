@@ -4,7 +4,7 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 ruby "3.0.1"
 
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
-gem "rails", "~> 7.0.0.rc1"
+gem "rails", "~> 7.0.0"
 
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
 gem "sprockets-rails", ">= 3.4.1"
@@ -63,7 +63,7 @@ group :development do
   # Add speed badges [https://github.com/MiniProfiler/rack-mini-profiler]
   gem "rack-mini-profiler", ">= 2.3.3"
 
-  gem 'annotate', '~> 3.1', '>= 3.1.1'
+  gem 'annotate', github: 'sebyx07/annotate_models'
   # Speed up commands on slow machines / big apps [https://github.com/rails/spring]
   # gem "spring"
 end
@@ -74,7 +74,7 @@ group :test do
   gem "selenium-webdriver", "~> 4.0"
   gem "webdrivers", "~> 5.0"
   # rexml no default in ruby 3.0, -> required for specs 
-  gem 'rexml', '~> 3.2'
+  # gem 'rexml', '~> 3.2'
     # pretty minitest ouput
   gem 'minitest', '~> 5.14'
   gem 'minitest-reporters', '~> 1.4'
