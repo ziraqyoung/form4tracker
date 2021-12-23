@@ -1,13 +1,11 @@
 const colors = require('tailwindcss/colors')
 
 module.exports = {
-  mode: 'jit',
-  purge: [
+  content: [
     './app/views/**/*.html.erb',
     './app/helpers/**/*.rb',
     './app/javascript/**/*.js'
   ],
-  darkMode: 'media', // or 'media' or 'class'
   theme: {
     extend: {
       colors: {
@@ -18,9 +16,6 @@ module.exports = {
         rose: colors.rose
       }
     },
-  },
-  variants: {
-    extend: {},
   },
   plugins: [
     require('@tailwindcss/typography'),
