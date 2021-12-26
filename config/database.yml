@@ -83,4 +83,4 @@ production:
   <<: *default
   database: form4tracker_production
   username: form4tracker
-  password: <%= ENV["form4tracker_DATABASE_PASSWORD"] %>
+  password: <%= ENV["FORM4TRACKER_DATABASE_PASSWORD"] %>
