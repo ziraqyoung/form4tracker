@@ -16,7 +16,9 @@
 # and, you'll have to watch "config/Guardfile" instead of "Guardfile"
 
 # fix: undefined method `singularize' for "companies":String
-require 'active_support/core_ext/string'
+# require "active_support"
+require "active_support"
+# require 'active_support/core_ext/string'
 
 guard :minitest, all_on_start: false do
   watch(%r{^test/(.*)/?(.*)_test\.rb$})
