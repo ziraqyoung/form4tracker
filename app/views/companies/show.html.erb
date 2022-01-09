@@ -1,1 +1,5 @@
 <h2><%= @company.name %></h2>
+
+<pre>
+  <%= JSON.pretty_generate @company.as_json %>
+</pre>
