@@ -1,6 +1,6 @@
 module StockPrices
   class Client
-    API_ENDPOINT = 'https://financialmodelingprep.com'
+    API_ENDPOINT = 'https://financialmodelingprep.com'.freeze
 
     def initialize(api_key: )
       @api_key = api_key
@@ -12,6 +12,14 @@ module StockPrices
         endpoint: "api/v3/historical-price-full/#{symbol.upcase}"
       )
     end
+
+    def for_tickers(*symbols)
+      request(
+        http_method: :get,
+        endpoint: "api/v3/historical-price-full/#{symbols.join(',')}"
+      )
+    end
+
 
     private
 
