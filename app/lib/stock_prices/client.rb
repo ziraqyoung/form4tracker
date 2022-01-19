@@ -20,7 +20,6 @@ module StockPrices
       )
     end
 
-
     private
 
       def client

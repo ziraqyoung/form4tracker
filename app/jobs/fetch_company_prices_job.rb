@@ -16,7 +16,6 @@ class FetchCompanyPricesJob < ApplicationJob
                    [entry['date'], entry['adjClose'] ]
                  end
                ]
-
              end
 
     company.update!(prices: prices) if prices.present?
