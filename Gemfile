@@ -83,8 +83,8 @@ group :test do
   gem 'guard', '~> 2.18'
   gem 'guard-minitest', '~> 2.4'
 
-  gem 'webmock', '~> 3.14'
-  gem 'vcr', '~> 6.0'
+  gem 'webmock'
+  gem 'vcr'
 end
 
 gem "faraday", "~> 2.0"

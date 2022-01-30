@@ -2,7 +2,7 @@
 #
 
 Rails.application.routes.draw do
-  root 'landing#index'
+  root 'companies#index'
 
   resources :charts, only: :index
   resources :companies, only: [:index, :show]
