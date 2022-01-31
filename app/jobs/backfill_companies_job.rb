@@ -2,7 +2,7 @@ class BackfillCompaniesJob < ApplicationJob
   queue_as :default
 
   def perform
-    [2010, 2020].each do |year|
+    [2021, 2022].each do |year|
       [1,2,3,4].each do |qtr|
         # https://www.sec.gov/Archives/edgar/full-index/2021/QTR4/ (year - 2021, qtr - 4)
         filings = HTTParty

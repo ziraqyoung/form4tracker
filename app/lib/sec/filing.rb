@@ -1,12 +1,32 @@
 module Sec
   class Filing
-    COLUMNS = [:cik, :title, :summary, :link, :term, :date, :file_id]
+    extend Sec::Client
 
-    attr_accessor(*COLUMNS)
+    def self.recent(count: 10)
+      response = request(
+        http_method: :get,
+        endpoint: 'cgi-bin/browse-edgar',
+        params: {
+          action: 'getcurrent',
+          type: 4.to_s,
+          output: 'atom',
+          count:,
+          owner: 'include'
+        }
+      )
 
-    def initialize(filing)
-      COLUMNS.each do |column|
-        instance_variable_set("@#{column}", filing[column])
+      entries = parse_xml_response(response.body)
+
+      entries.map do |entry|
+        Sec::FilingDetails.new(
+          cik: entry[:title].match(/\((\w{10})\)/)[1],
+          file_id: entry[:id].split('=').last,
+          term: entry[:category][:term],
+          title: entry[:title],
+          summary: entry[:summary],
+          date: DateTime.parse(entry[:updated]),
+          link: entry[:link][:href].gsub('-index.htm', '.txt'),
+        )
       end
     end
   end
