@@ -2,7 +2,7 @@ module Sec
   class FilingDetails
     include Sec::Client
 
-    COLUMNS = %i[cik title summary link term date file_id content].freeze
+    COLUMNS = %i[cik title summary link term date file_id].freeze
 
     attr_reader(*COLUMNS)
 
@@ -15,7 +15,7 @@ module Sec
     def content
       request(
         http_method: :get,
-        endpoint: (link.remove('https://www.sec.gov/'))
+        endpoint: link.remove('https://www.sec.gov/')
       )
     end
   end
