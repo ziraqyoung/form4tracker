@@ -1,7 +1,7 @@
 source "https://rubygems.org"
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby "3.1.0"
+ruby "3.1.2"
 
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem "rails", "~> 7.0.1"
@@ -10,10 +10,10 @@ gem "rails", "~> 7.0.1"
 gem "sprockets-rails"
 
 # Use postgresql as the database for Active Record
-gem "pg", "~> 1.1"
+gem "pg"
 
 # Use the Puma web server [https://github.com/puma/puma]
-gem "puma", "~> 5.0"
+gem "puma"
 
 # Bundle and transpile JavaScript [https://github.com/rails/jsbundling-rails]
 gem "jsbundling-rails"
@@ -31,7 +31,7 @@ gem "cssbundling-rails"
 gem "jbuilder"
 
 # Use Redis adapter to run Action Cable in production
-gem "redis", "~> 4.0"
+gem "redis"
 
 # Use Kredis to get higher-level data types in Redis [https://github.com/rails/kredis]
 # gem "kredis"
@@ -51,8 +51,8 @@ gem "bootsnap", require: false
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
 # gem "image_processing", "~> 1.2"
 
-gem 'alphavantagerb', '~> 1.4'
-gem "httparty", "~> 0.20.0"
+gem 'alphavantagerb'
+gem "httparty"
 
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
@@ -77,16 +77,16 @@ group :test do
   gem "webdrivers"
 
    # pretty minitest ouput
-  gem 'minitest', '~> 5.14'
-  gem 'minitest-reporters', '~> 1.4'
+  gem 'minitest'
+  gem 'minitest-reporters'
   # Automated testing upon file change
-  gem 'guard', '~> 2.18'
-  gem 'guard-minitest', '~> 2.4'
+  gem 'guard'
+  gem 'guard-minitest'
 
   gem 'webmock'
   gem 'vcr'
 end
 
-gem "faraday", "~> 2.0"
+gem "faraday"
 
-gem "oj", "~> 3.13"
+gem "oj"
