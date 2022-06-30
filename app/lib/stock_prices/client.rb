@@ -2,7 +2,7 @@ module StockPrices
   class Client
     API_ENDPOINT = 'https://financialmodelingprep.com'.freeze
 
-    def initialize(api_key: )
+    def initialize(api_key:)
       @api_key = api_key
     end
 
